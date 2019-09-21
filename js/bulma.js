@@ -16,7 +16,25 @@
         offset: 80
     });
     
-    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-    observer.observe();
-
+    //const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    //observer.observe();
+    
+    // Ugly fix attempt for garbage image on iPhone
+    // https://stackoverflow.com/questions/24154666/background-size-cover-not-working-on-ios
+    var isIphone = navigator.userAgent.indexOf("iPhone") != -1 ;
+    
+    if (isIphone) {
+        //alert("Quel joli iPhone :)")
+        var items = document.getElementsByClassName("image-all");
+        for (var i=0; i < items.length; i++) {
+            items[i].classList.remove('parallax');
+        }
+    }else{
+        console.log("Thank you, no need for iPhone tricks today :)");
+        var items = document.getElementsByClassName("image-all");
+        for (var i=0; i < items.length; i++) {
+            items[i].classList.add('parallax');
+        }
+    }
+    // /Ugly fix attempt for garbage image on iPhone
 })();

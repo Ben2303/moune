@@ -82,17 +82,64 @@ body {
   z-index: -1;
 }
 
-.parallax {
-  /* Set a specific height */
-  height: 350px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
+.image-home {
+  background-image: url(../resources/images/Welcome_RE.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.image-enfant {
+  background-image: url(../resources/images/Enfants_bg.jpg);
+}
+
+.image-ado {
+  background-image: url(../resources/images/Ados_bg.jpg);
+}
+
+.image-adulte {
+  background-image: url(../resources/images/Adultes_bg.jpg);
+}
+
+.image-conf {
+  background-image: url(../resources/images/Conferences_bg.jpg);
+}
+
+.image-bilan {
+  background-image: url(../resources/images/Bilan_bg.jpg);
+}
+
+.image-quisuisje {
+  background-image: url(../resources/images/Quisuisje_bg.jpg);
+}
+
+.image-contact {
+  background-image: url(../resources/images/Contact_bg.jpg);
+}
+
+.image-all {
+  /* Set a specific height */
+  height: 350px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax {
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+}
+
+@media(max-width: 768px){
+  #upay_image{
+  background-image:url("https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/leisa_christmas_false_color.png");
+   }
+}
+@media(max-width: 500px){
+  #upay_image{
+  background-image:url("http://i.dailymail.co.uk/i/pix/2016/03/08/22/006F877400000258-3482989-image-a-10_1457476109735.jpg");
+  }
+}
 .animated { 
     animation-duration: 2s; 
     animation-fill-mode: both; 
